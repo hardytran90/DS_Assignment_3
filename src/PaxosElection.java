@@ -10,7 +10,6 @@ public class PaxosElection {
     protected List<CouncilMember> council = new ArrayList<>();
     String host = "0.0.0.0";
     public void start() throws InterruptedException {
-        cleanUp();
         initializeMembers();
         startElection();
     }
@@ -45,30 +44,6 @@ public class PaxosElection {
             member.startTime = startTime;
             member.majority = council.size()/2 + 1;
             member.neighbours = new ArrayList<>(memberIds);
-        }
-    }
-
-    private void cleanUp() {
-        try {
-            System.out.println("Delete local files");
-            for (CouncilMember member: council) {
-                String filename = member.getMemberId() + "_result.txt";
-                Files.deleteIfExists(Paths.get(filename));
-            }
-        } catch (Exception e) {
-            System.out.println("ERROR: Can't delete files " + e.getMessage());
-        }
-    }
-
-    public void memberOffline() {
-        long currentTime = System.currentTimeMillis();
-        long modVal = currentTime % 2;
-        if (modVal == 0) {
-            M2.setOffline(true);
-            M2.setResponseProfile(2);
-        } else {
-            M3.setOffline(true);
-            M3.setResponseProfile(3);
         }
     }
 

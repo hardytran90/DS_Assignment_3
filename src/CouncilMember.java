@@ -415,19 +415,4 @@ public class CouncilMember {
         this.memberId = memberId;
     }
 
-    public SocketHelper getSocketLink() {
-        return socketLink;
-    }
-
-    public void setSocketLink(SocketHelper socketLink) {
-        this.socketLink = socketLink;
-    }
-
-    public List<Integer> getNeighbours() {
-        return neighbours;
-    }
-
-    public void setNeighbours(List<Integer> neighbours) {
-        this.neighbours = neighbours;
-    }
 }
