@@ -14,9 +14,9 @@ public class Test3ProposersWithOffline {
             election.M3.setResponseProfile(0);
             election.M4.setResponseProfile(1);
             election.M5.setResponseProfile(2);
-            election.M6.setResponseProfile(3); // never response
+            election.M6.setResponseProfile(3);
             election.M7.setResponseProfile(5);
-            election.M8.setResponseProfile(6);
+            election.M8.setResponseProfile(6); // never response
             election.M9.setResponseProfile(0);
 
             List<CouncilMember> proposers = new ArrayList<>();
