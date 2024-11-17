@@ -1,4 +1,3 @@
-# DS_Assignment_3
 - Open terminal
 - At project root folder. For example: C:\PaxosElection
 - Compile main classes: javac -d out/production/PaxosElection src/*.java
